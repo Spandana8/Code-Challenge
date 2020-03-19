@@ -4,6 +4,13 @@ import { UsersSelector } from '../modules/users/selectors';
 import { Container } from 'react-bootstrap';
 import { PostDetails } from '../components/molecules/postDetails';
 
+/**
+ * Generates Post details page
+ *
+ * @param {props} f
+ * @returns {Post details view}
+ */
+
 const HomePage = props => {
   const { postDetails } = props;
 
@@ -25,7 +32,7 @@ const HomePage = props => {
 
 const mapStateToProps = state => {
   return {
-    postDetails: UsersSelector.getPostDetails(state),
+    postDetails: UsersSelector.getPostDetails(state)
   };
 };
 

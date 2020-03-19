@@ -8,7 +8,7 @@ const initialState = {};
 
 const middleware = [
   reduxThunk.withExtraArgument({ api }),
-  reduxPackMiddleware,
+  reduxPackMiddleware
 ].filter(Boolean);
 
 const store = createStore(

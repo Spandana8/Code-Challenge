@@ -11,6 +11,12 @@ Frontend app to fetch the posts given by use built using ReactJS
 ### UI
 
 - [React JS](https://reactjs.org/docs/getting-started.html) - A JavaScript library for building user interfaces
+- [ATOM](https://atomicdesign.bradfrost.com/table-of-contents) - A methodology to creating design systems 
+
+### Versions History
+- React JS: 16.13.0
+- Redux: 4.0.5
+- Node: 12.15.0
 
 ### Build System & Dependency Management
 

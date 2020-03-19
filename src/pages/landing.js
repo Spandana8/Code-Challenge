@@ -5,7 +5,13 @@ import { UserActions } from '../modules/users/actions';
 import { UsersSelector } from '../modules/users/selectors';
 import { Container } from 'react-bootstrap';
 import UserPosts from '../components/molecules/userPosts';
-import Loader from 'react-loader-spinner';
+
+/**
+ * Generates Home page
+ *
+ * @param {props}
+ * @returns {home page view}
+ */
 
 const HomePage = props => {
   const { getUsers, getPosts, userPosts, setPostDetails, isLoading } = props;
@@ -29,7 +35,7 @@ const HomePage = props => {
 const mapStateToProps = state => {
   return {
     isLoading: UsersSelector.isPageLoading(state),
-    userPosts: UsersSelector.getUserPosts(state),
+    userPosts: UsersSelector.getUserPosts(state)
   };
 };
 
@@ -39,7 +45,7 @@ const mapDispatchToProps = dispatch => {
     {
       getUsers,
       getPosts,
-      setPostDetails,
+      setPostDetails
     },
     dispatch
   );

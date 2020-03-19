@@ -1,6 +1,14 @@
 import React from 'react';
 import { Card } from 'react-bootstrap';
 import { ButtonComponent } from '../../atoms/button';
+
+/**
+ * Generates a Post detail card
+ *
+ * @param {props} data , function
+ * @returns {details view}
+ */
+
 export const PostDetails = props => {
   const { data, goToHome } = props;
   return (

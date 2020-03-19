@@ -4,7 +4,6 @@ const getPosts = state => {
 };
 
 const getPostsLoading = state => {
-  console.log(state, 'state:::');
   return state.user.loading.posts;
 };
 
@@ -25,22 +24,7 @@ const getUsersError = state => {
 };
 
 const isPageLoading = state => {
-  console.log(getPostsLoading(state), getUsersLoading(state), 'here:::::');
   return getPostsLoading(state) && getUsersLoading(state);
-};
-
-const getUserPosts = state => {
-  const users = getUsers(state);
-  const posts = getPosts(state);
-  if (users && posts) {
-    return mapUsersPosts(users.data, posts.data);
-  } else {
-    return [];
-  }
-};
-
-const mapUsersPosts = (users, posts) => {
-  return posts.map(post => mapUsers(post, users));
 };
 
 const mapUsers = (post, users) => {
@@ -60,8 +44,8 @@ const mapUsers = (post, users) => {
       zipcode: data.address.zipcode,
       geo: {
         lat: data.address.geo.lat,
-        lng: data.address.geo.lng,
-      },
+        lng: data.address.geo.lng
+      }
     },
     location: `${data.address.suite}, ${data.address.street}, ${data.address.city}`,
     phone: data.phone,
@@ -69,13 +53,26 @@ const mapUsers = (post, users) => {
     company: {
       name: data.company.name,
       catchPhrase: data.company.catchPhrase,
-      bs: data.company.bs,
-    },
+      bs: data.company.bs
+    }
   };
 };
 
+const mapUsersPosts = (users, posts) => {
+  return posts.map(post => mapUsers(post, users));
+};
+
+const getUserPosts = state => {
+  const users = getUsers(state);
+  const posts = getPosts(state);
+  if (users && posts) {
+    return mapUsersPosts(users.data, posts.data);
+  } else {
+    return [];
+  }
+};
+
 const getPostDetails = state => {
-  console.log(state, 'state:::');
   return state.user.postDetails;
 };
 
@@ -88,5 +85,5 @@ export const UsersSelector = {
   getUsersError,
   isPageLoading,
   getUserPosts,
-  getPostDetails,
+  getPostDetails
 };

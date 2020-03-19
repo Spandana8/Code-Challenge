@@ -3,6 +3,13 @@ import { Table } from 'react-bootstrap';
 import { withRouter } from 'react-router-dom';
 import './styles.scss';
 
+/**
+ * Generates a tale with post data
+ *
+ * @param {props}
+ * @returns {table view}
+ */
+
 const UserPosts = props => {
   const { userPosts, setPostDetails } = props;
 

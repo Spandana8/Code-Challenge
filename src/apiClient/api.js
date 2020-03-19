@@ -4,18 +4,17 @@ import { BASE_URL } from './apiConstants';
 
 const axiosInstances = axios.create({
   baseURL: BASE_URL,
-  validateStatus: status => status >= 200 && status < 300,
+  validateStatus: status => status >= 200 && status < 300
 });
 
 const fireRequest = async (method, url, data) => {
   let headers = { 'Content-Type': 'application/json' };
-  console.log(method, url, data, 'data::::::');
   const options = {
     method,
     data: (method === 'POST' && data) || (method === 'PUT' && data),
     mode: 'web',
     headers: headers,
-    params: _.get(data, 'params', undefined),
+    params: _.get(data, 'params', undefined)
   };
   try {
     return await axiosInstances(url, options);
@@ -43,5 +42,5 @@ export default {
 
   axios() {
     return axiosInstances;
-  },
+  }
 };

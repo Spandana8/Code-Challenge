@@ -6,7 +6,7 @@ import { NavbarSection } from '../src/components/molecules/navbarSection';
 
 export const RouteNames = {
   landing: '/',
-  postDetails: '/postDetails/:id',
+  postDetails: '/postDetails/:id'
 };
 
 export default function RouteComponent() {
