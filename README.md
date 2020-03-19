@@ -4,6 +4,12 @@
 
 Frontend app to fetch the posts given by user built using ReactJS
 
+## Deployed Url
+
+-----
+
+https://rc-code-challenge.herokuapp.com/
+
 ## Dependencies
 
 ---
