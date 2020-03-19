@@ -2,7 +2,7 @@
 
 ---
 
-Frontend app to fetch the posts given by use built using ReactJS
+Frontend app to fetch the posts given by user built using ReactJS
 
 ## Dependencies
 
