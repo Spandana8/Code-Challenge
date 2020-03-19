@@ -1,0 +1,9 @@
+.posts-table {
+  background: #ffffff;
+  box-shadow: 0 0 5px #888;
+  tbody {
+    > tr {
+      cursor: pointer;
+    }
+  }
+}

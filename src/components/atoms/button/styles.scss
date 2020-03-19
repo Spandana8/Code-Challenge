@@ -1,0 +1,19 @@
+.back-button {
+  background-color: Transparent;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  outline: none;
+  i {
+    padding-right: 10px;
+  }
+  &.active,
+  &.visit {
+    outline: none;
+    border: none;
+    overflow: hidden;
+    background-color: Transparent;
+    background-repeat: no-repeat;
+  }
+}
