@@ -14,7 +14,7 @@ import UserPosts from '../components/molecules/userPosts';
  */
 
 const HomePage = props => {
-  const { getUsers, getPosts, userPosts, setPostDetails, isLoading } = props;
+  const { getUsers, getPosts, userPosts, setPostDetails } = props;
 
   useEffect(() => {
     getPosts();
@@ -34,7 +34,6 @@ const HomePage = props => {
 
 const mapStateToProps = state => {
   return {
-    isLoading: UsersSelector.isPageLoading(state),
     userPosts: UsersSelector.getUserPosts(state)
   };
 };

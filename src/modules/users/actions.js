@@ -49,7 +49,7 @@ const getPosts = () => (dispatch, getState, { api }) => {
 };
 
 // To store post Details
-const setPostDetails = data => (dispatch, getState) => {
+const setPostDetails = data => dispatch => {
   dispatch({
     type: UserActionTypes.POST_DETAILS.FETCH,
     payload: data
