@@ -4,7 +4,7 @@ const getPosts = state => {
 };
 
 const getPostsLoading = state => {
-  console.log(state,'state:::')
+  console.log(state, 'state:::');
   return state.user.loading.posts;
 };
 
@@ -25,7 +25,7 @@ const getUsersError = state => {
 };
 
 const isPageLoading = state => {
-  console.log(getPostsLoading(state) , getUsersLoading(state), 'here:::::')
+  console.log(getPostsLoading(state), getUsersLoading(state), 'here:::::');
   return getPostsLoading(state) && getUsersLoading(state);
 };
 
